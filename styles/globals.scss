@@ -1,0 +1,94 @@
+@import "@/styles/_config.scss";
+
+body {
+  font-family: $primary-font-regular;
+  background-color: #101112;
+  color: white;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.TheMainWindow {
+  height: 100vh;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-rows: fit-content(100px) 1fr;
+
+  .TheWindow {
+    height: 100%;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    font-size: 0.9rem;
+
+    .LinkBar {
+      background-color: #202122;
+      border-right: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-top: 0.1rem;
+      text-align: center;
+
+      a {
+        margin: 0.18rem 0;
+        aspect-ratio: 1/1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+
+        & > svg {
+          width: 25px;
+          height: 25px;
+          // aspect-ratio: 1/1;
+          color: white;
+          transition: 0.3s;
+          margin-bottom: 0.32rem;
+        }
+
+        &:hover {
+          color: #07bf67;
+          background-color: #2c2c2c;
+
+          & > svg {
+            color: #07bf67;
+          }
+        }
+      }
+
+      .active-link {
+        color: #07bf67;
+        background-color: #2c2c2c;
+
+        & > svg {
+          color: #07bf67;
+        }
+      }
+
+      hr {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 90%;
+        border-bottom: 1px solid #313131;
+        border-right: 0;
+        border-left: 0;
+        border-top: 0;
+      }
+    }
+
+    .MainBody {
+      overflow: auto;
+    }
+  }
+}
+// * {
+//   outline: 1px solid red;
+// }

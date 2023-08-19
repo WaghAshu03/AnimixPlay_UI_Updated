@@ -1,0 +1,212 @@
+@import "@/styles/_config.scss";
+
+.NavbarContainer {
+  // top: 0;
+  z-index: 999;
+  // position: sticky;
+  // height: fit-content;
+  // display: grid;
+  // grid-template-rows: 1fr;
+  // @media (max-width: 600px) {
+  // position: static;
+  // grid-template-rows: 1fr 0.4fr;
+  // }
+}
+
+.Navbar {
+  background-color: #1d1e1ff5;
+  border-bottom: 1.5px solid #303030;
+  padding: 1.3rem 1.2rem;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-gap: 2.5rem;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px) {
+    display: flex;
+    border-bottom: 0px;
+    justify-content: space-between;
+  }
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px red, 0 0 1em rgb(148, 148, 255),
+    0 0 0.2em rgb(161, 161, 255);
+  font-family: $primary-font-bold;
+  color: white;
+  font-style: normal;
+  // font-weight: 100;
+  font-size: 1.65rem;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.SearchBox {
+  display: flex;
+
+  & > div {
+    align-items: center;
+    background-color: #101112;
+    // background-color: red;
+    min-width: 32vw;
+    border: 1.5px solid #303030;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    & > img {
+      width: 0.9rem;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      margin-right: 0.4rem;
+      margin-left: 0.2rem;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    & > input {
+      font-size: 1.05rem;
+      margin-right: 0.2rem;
+      background-color: #101112;
+      color: white;
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+
+    & > button {
+      padding: 0.4rem 0.6rem;
+      background-color: #303030;
+      border-radius: 2px;
+      color: white;
+      border: none;
+      outline: none;
+      width: fit-content;
+      font-size: 0.9rem;
+    }
+
+    transform: translateX(-1.5vw);
+  }
+
+  @media (max-width: 600px) {
+    display: none !important;
+  }
+}
+
+.SearchBoxResponsive {
+  display: flex;
+  padding: 0rem 1.2rem 1rem 1.2rem;
+  background-color: #1d1e1f;
+  border-bottom: 1px solid #303030;
+  & > div {
+    background-color: #101112;
+    // background-color: red;
+    width: 100%;
+    border: 1.5px solid #303030;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    & > input {
+      font-size: 1.05rem;
+      margin-right: 0.2rem;
+      background-color: #101112;
+      color: white;
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+
+    & > button {
+      padding: 0.4rem 0.6rem;
+      background-color: #303030;
+      border-radius: 2px;
+      color: white;
+      border: none;
+      outline: none;
+      width: fit-content;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.UserProfileDropdownPic {
+  background-color: red;
+  width: 48px;
+  border-radius: 50%;
+  // overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  position: relative;
+
+  & > img {
+    height: 100%;
+    cursor: pointer;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .DropDown {
+    position: absolute;
+    background-color: #333;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 0.5rem 0rem;
+    border-radius: 8px;
+    width: max-content;
+    top: 3.5rem;
+    right: 0rem;
+    max-width: 90vw;
+    border: #303030;
+    overflow: hidden;
+    z-index: 1000;
+
+    a,
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+      min-width: 150px;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1.2rem;
+      transition: 0.5s;
+      text-decoration: none;
+      font-size: 1rem;
+      color: white;
+
+      & > img {
+        height: 1.5rem;
+        filter: invert(1);
+        object-fit: contain;
+        margin-right: 0.9rem;
+      }
+
+      &:hover {
+        // color: rgb(242, 69, 69);
+        background-color: #0000007f;
+      }
+    }
+  }
+}

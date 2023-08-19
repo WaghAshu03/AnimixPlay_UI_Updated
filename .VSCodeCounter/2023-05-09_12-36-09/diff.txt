@@ -1,0 +1,78 @@
+Date : 2023-05-09 12:36:09
+Directory : d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project
+Total : 36 files,  1984 codes, 89 comments, 259 blanks, all 2332 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JavaScript     |         20 |      1,191 |         70 |        133 |      1,394 |
+| SCSS           |         10 |        527 |         16 |        104 |        647 |
+| JavaScript JSX |          4 |        233 |          3 |         17 |        253 |
+| Markdown       |          1 |         29 |          0 |          5 |         34 |
+| JSON           |          1 |          4 |          0 |          0 |          4 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                          | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                             |         36 |      1,984 |         89 |        259 |      2,332 |
+| . (Files)                                                                                                     |          3 |         50 |          1 |         11 |         62 |
+| components                                                                                                    |          9 |        358 |          9 |         45 |        412 |
+| components\Footer                                                                                             |          1 |          2 |         -1 |          1 |          2 |
+| components\LoginSignUp                                                                                        |          2 |        147 |          3 |          9 |        159 |
+| components\Navbar                                                                                             |          2 |         10 |          0 |          2 |         12 |
+| components\ShowCollection                                                                                     |          2 |        123 |          7 |         21 |        151 |
+| components\Tabs                                                                                               |          2 |         76 |          0 |         12 |         88 |
+| middleware                                                                                                    |          1 |         11 |          1 |          4 |         16 |
+| models                                                                                                        |          2 |         36 |          0 |          6 |         42 |
+| pages                                                                                                         |         16 |      1,127 |         68 |        117 |      1,312 |
+| pages (Files)                                                                                                 |          5 |        385 |         49 |         37 |        471 |
+| pages\[show]                                                                                                  |          2 |        470 |          6 |         31 |        507 |
+| pages\api                                                                                                     |          9 |        272 |         13 |         49 |        334 |
+| styles                                                                                                        |          5 |        402 |         10 |         76 |        488 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                      | language       | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\README.md                                            | Markdown       |         29 |          0 |          5 |         34 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Footer\Footer.module.scss                 | SCSS           |          2 |         -1 |          1 |          2 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\LoginSignUp\LoginSignUp.jsx               | JavaScript JSX |        146 |          3 |          9 |        158 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\LoginSignUp\LoginSignUp.module.scss       | SCSS           |          1 |          0 |          0 |          1 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Navbar\Navbar.jsx                         | JavaScript JSX |          0 |          0 |          1 |          1 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Navbar\Navbar.module.scss                 | SCSS           |         10 |          0 |          1 |         11 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\ShowCollection\ShowCollection.jsx         | JavaScript JSX |         45 |          0 |          3 |         48 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\ShowCollection\ShowCollection.module.scss | SCSS           |         78 |          7 |         18 |        103 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Tabs\Tabs.jsx                             | JavaScript JSX |         42 |          0 |          4 |         46 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Tabs\Tabs.module.scss                     | SCSS           |         34 |          0 |          8 |         42 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\middleware\mongoose.js                               | JavaScript     |         11 |          1 |          4 |         16 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\models\show.js                                       | JavaScript     |         20 |          0 |          3 |         23 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\models\user.js                                       | JavaScript     |         16 |          0 |          3 |         19 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\package.json                                         | JSON           |          4 |          0 |          0 |          4 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\[show]\[episode].js                            | JavaScript     |        203 |          2 |         16 |        221 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\[show]\index.js                                | JavaScript     |        267 |          4 |         15 |        286 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\_app.js                                        | JavaScript     |         26 |          0 |          0 |         26 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\add-shows.js                               | JavaScript     |         69 |          1 |         12 |         82 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\add-user.js                                | JavaScript     |         42 |          2 |          7 |         51 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\chk-user.js                                | JavaScript     |         27 |          2 |          5 |         34 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\get-show.js                                | JavaScript     |         12 |          1 |          4 |         17 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\get-shows.js                               | JavaScript     |          8 |          1 |          3 |         12 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\get-specific-shows.js                      | JavaScript     |         16 |          1 |          4 |         21 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\get-user.js                                | JavaScript     |         40 |          2 |          5 |         47 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\get-users.js                               | JavaScript     |          7 |          1 |          3 |         11 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\update-user.js                             | JavaScript     |         51 |          2 |          6 |         59 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\index.js                                       | JavaScript     |         67 |         45 |         12 |        124 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\my-profile.js                                  | JavaScript     |         55 |          0 |          6 |         61 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\recently-visited.js                            | JavaScript     |         93 |          1 |          8 |        102 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\watch-list.js                                  | JavaScript     |        144 |          3 |         11 |        158 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\Home.module.scss                              | SCSS           |         72 |          0 |         13 |         85 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\MyProfile.module.scss                         | SCSS           |         48 |          1 |          9 |         58 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\Show.module.scss                              | SCSS           |        132 |          1 |         25 |        158 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\VideoStream.module.scss                       | SCSS           |        134 |          5 |         24 |        163 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\globals.scss                                  | SCSS           |         16 |          3 |          5 |         24 |
+| d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\temp.js                                              | JavaScript     |         17 |          1 |          6 |         24 |
+| Total                                                                                                         |                |      1,984 |         89 |        259 |      2,332 |
++---------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

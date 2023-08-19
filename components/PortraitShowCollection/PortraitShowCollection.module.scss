@@ -1,0 +1,65 @@
+.PortraitShowCollection {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  padding: 0 1.8rem;
+}
+
+.PortraitShow {
+  img {
+    width: 100%;
+    aspect-ratio: 8/13.5;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.35s;
+  padding: 0.25rem;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-12px);
+  }
+}
+
+.title {
+  transition: 400ms;
+  font-size: 1.08rem;
+  margin-top: 0.4rem;
+}
+
+.tags {
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  color: #07be67;
+  transition: 0.4s;
+}
+
+.AvgDuration {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: yellow;
+  display: flex;
+  justify-content: space-between;
+
+  & > div:first-child {
+    color: gray;
+  }
+
+  & > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin-right: 0.2rem;
+    color: yellow;
+    width: 0.8rem;
+    aspect-ratio: 1/1;
+  }
+}

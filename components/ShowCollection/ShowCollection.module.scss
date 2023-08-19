@@ -1,0 +1,160 @@
+@import "@/styles/_config.scss";
+
+.ShowCollection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 320px));
+  gap: 2.6rem 1.2rem;
+  grid-auto-flow: dense;
+  justify-content: center;
+
+  .LandscapeShow {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .LandscapeShowPoster {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s;
+      }
+
+      & > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0000002f;
+        opacity: 0;
+        transition: 0.4s;
+
+        img {
+          filter: invert(1);
+          transform: translateY(1.4rem);
+          transition: 0.4s;
+        }
+      }
+    }
+
+    .LandscapeShowTitle {
+      transition: 400ms;
+      font-size: 1.08rem;
+      margin-top: 0.65rem;
+    }
+
+    .LandscapeShowTags {
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+      color: #07be67;
+      transition: 0.4s;
+      // font-weight: bold;
+    }
+
+    .LandscapeShowDuration {
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      color: yellow;
+      display: flex;
+      justify-content: space-between;
+
+      & > div:first-child {
+        color: gray;
+      }
+
+      & > div:nth-child(2) {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        margin-right: 0.2rem;
+        color: yellow;
+        width: 0.8rem;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    &:hover {
+      .LandscapeShowPoster {
+        & > img {
+          scale: 1.15;
+        }
+
+        & > div {
+          opacity: 1;
+
+          img {
+            transform: translateY(0);
+          }
+        }
+      }
+
+      .LandscapeShowTitle {
+        color: rgb(255, 38, 38);
+        color: yellowgreen;
+      }
+
+      .LandscapeShowTags {
+        color: gray;
+      }
+    }
+  }
+}
+
+.LoadLimitContainer {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  button {
+    background-color: #1fb141;
+    color: white;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    transition: 0.4s;
+    border: none;
+    outline: none;
+
+    &:hover {
+      background-color: #179735;
+    }
+  }
+}
+
+.LandscapeShowDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  button {
+    background-color: red;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    margin-top: 0.8rem;
+  }
+}

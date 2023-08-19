@@ -1,0 +1,24 @@
+"filename", "language", "JavaScript", "JSON", "Markdown", "SCSS", "SVG", "JavaScript JSX", "JSON with Comments", "Python", "comment", "blank", "total"
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\CreateReactComponent.py", "Python", 0, 0, 0, 0, 0, 0, 0, 57, 1, 17, 75
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\README.md", "Markdown", 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 12
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Footer\Footer.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 16, 0, 0, 0, 3, 19
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Footer\Footer.module.scss", "SCSS", 0, 0, 0, 23, 0, 0, 0, 0, 1, 4, 28
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\LoginSignUp\LoginSignUp.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 180, 0, 0, 1, 12, 193
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\LoginSignUp\LoginSignUp.module.scss", "SCSS", 0, 0, 0, 114, 0, 0, 0, 0, 3, 18, 135
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Navbar\Navbar.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 89, 0, 0, 0, 9, 98
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\components\Navbar\Navbar.module.scss", "SCSS", 0, 0, 0, 113, 0, 0, 0, 0, 7, 18, 138
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\jsconfig.json", "JSON with Comments", 0, 0, 0, 0, 0, 0, 4, 0, 4, 0, 8
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\next.config.js", "JavaScript", 4, 0, 0, 0, 0, 0, 0, 0, 1, 2, 7
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\package-lock.json", "JSON", 0, 592, 0, 0, 0, 0, 0, 0, 0, 1, 593
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\package.json", "JSON", 0, 17, 0, 0, 0, 0, 0, 0, 0, 1, 18
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\_app.js", "JavaScript", 30, 0, 0, 0, 0, 0, 0, 0, 0, 7, 37
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\_document.js", "JavaScript", 12, 0, 0, 0, 0, 0, 0, 0, 0, 2, 14
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\api\hello.js", "JavaScript", 3, 0, 0, 0, 0, 0, 0, 0, 1, 2, 6
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\pages\index.js", "JavaScript", 123, 0, 0, 0, 0, 0, 0, 0, 0, 7, 130
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\public\next.svg", "SVG", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\public\thirteen.svg", "SVG", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\public\vercel.svg", "SVG", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\Home.module.scss", "SCSS", 0, 0, 0, 195, 0, 0, 0, 0, 1, 30, 226
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\_config.scss", "SCSS", 0, 0, 0, 69, 0, 0, 0, 0, 2, 15, 86
+"d:\Academics\3rd Year\Sem 6\WT Mini Project\main-project\styles\globals.scss", "SCSS", 0, 0, 0, 9, 0, 0, 0, 0, 0, 2, 11
+"Total", "-", 172, 609, 12, 523, 3, 285, 4, 57, 22, 150, 1837
