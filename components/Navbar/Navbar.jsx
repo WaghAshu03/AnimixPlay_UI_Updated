@@ -49,7 +49,7 @@ const Navbar = (props) => {
           ref={targetElementRef}
         >
           <img
-            src={AvatarCollection[0]}
+            src={AvatarCollection[ClientData.profile_image_index]}
             alt=""
             onClick={() => setDropDownEnabled((prevVal) => !prevVal)}
           />
