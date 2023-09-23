@@ -150,7 +150,7 @@ const show = () => {
       .get("/api/get-shows")
       .then(function (response) {
         console.log(response.data.show);
-        setSuggestionsCollection(response.data.show);
+        setSuggestionsCollection(response.data);
       })
       .catch(function (error) {
         console.log(error);
