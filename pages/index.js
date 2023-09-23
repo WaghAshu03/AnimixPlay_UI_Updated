@@ -98,7 +98,7 @@ export default function Home() {
     axios
       .get("/api/get-shows")
       .then(function (response) {
-        setSuggestionsCollection(response.data.show);
+        setSuggestionsCollection(response.data);
       })
       .catch(function (error) {
         console.log(error);
@@ -232,6 +232,10 @@ export default function Home() {
       })
       .finally(function () {});
   };
+
+  useEffect(() => {
+    console.log(SuggestionsCollection);
+  }, [SuggestionsCollection]);
 
   return (
     <>

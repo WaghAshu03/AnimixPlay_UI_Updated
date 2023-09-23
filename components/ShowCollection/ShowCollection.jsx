@@ -18,6 +18,21 @@ const ShowCollection = ({
 }) => {
   const [LoadLimit, setLoadLimit] = useState(8);
 
+  if (ShowList === undefined)
+    return (
+      <div
+        style={{
+          textAlign: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "0.9rem",
+        }}
+      >
+        No Result Found
+      </div>
+    );
+
   return removeEmptyVal(ShowList).length !== 0 ? (
     <>
       <div className={styles.ShowCollection + " " + collectionClassName}>

@@ -37,6 +37,15 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
   const [SignUpEmail, setSignUpEmail] = useState("");
   const [SignUpEmailMessage, setSignUpEmailMessage] = useState("");
   const [SelectedAvatarIndex, setSelectedAvatarIndex] = useState(0);
+  const BackgroundImages = [
+    "/wallpaper (3).jpg",
+    "/wallpaper (6).jpg",
+    "/wallpaper (8).jpg",
+    "/wallpaper (10).jpg",
+  ];
+  const [CurrentBgIndex, setCurrentBgIndex] = useState(
+    Math.floor(Math.random() * BackgroundImages.length)
+  );
 
   useEffect(() => {
     const valid = () => {
@@ -195,13 +204,18 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
   };
 
   return (
-    <div className={styles.LoginSignUp}>
+    <div
+      className={styles.LoginSignUp}
+      style={{
+        backgroundImage: `url("${BackgroundImages[CurrentBgIndex]}")`,
+      }}
+    >
       <div>
         {isLogin ? (
           <div>
             <h1>Login</h1>
 
-            <label>Username</label>
+            {/* <label>Username</label> */}
             <input
               type="text"
               placeholder="Username"
@@ -212,7 +226,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
               <div className={styles.Message}>{LoginUsernameMessage}</div>
             )}
             <br />
-            <label>Password</label>
+            {/* <label>Password</label> */}
             <input
               type="password"
               placeholder="Password"
@@ -241,7 +255,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
             {isStage1Complete ? (
               <>
                 <h1>Register</h1>
-                <label>First Name</label>
+                {/* <label>First Name</label> */}
                 <input
                   type="text"
                   placeholder="First Name"
@@ -252,7 +266,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   <div className={styles.Message}>{SignUpFirstNameMessage}</div>
                 )}
                 <br />
-                <label>Last Name</label>
+                {/* <label>Last Name</label> */}
                 <input
                   type="text"
                   placeholder="Last Name"
@@ -264,7 +278,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                 )}
                 <br />
 
-                <label>Email</label>
+                {/* <label>Email</label> */}
                 <input
                   type="email"
                   placeholder="Email"
@@ -302,7 +316,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
               <>
                 <h1>Sign Up</h1>
 
-                <label>Username</label>
+                {/* <label>Username</label> */}
                 <input
                   type="text"
                   placeholder="Username"
@@ -313,7 +327,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   <div className={styles.Message}>{SignUpUsernameMessage}</div>
                 )}
                 <br />
-                <label>Password</label>
+                {/* <label>Password</label> */}
                 <input
                   type="password"
                   placeholder="Password"

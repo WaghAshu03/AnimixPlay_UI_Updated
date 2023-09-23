@@ -1,65 +1,22 @@
-import math
+import hashlib
+import itertools
+import string
 
-p = 29
-q = 31
-n = p * q
-phi = (p - 1) * (q - 1)
+# Example SHA-256 hash to guess
+target_hash = "9c15f485ee82b949c7f2e18f6c13a10c73267b76b20c6a4018b964d93c39c1a3"
 
-def gcd(a, b): 
-  if (a < b):
-    temp = a
-    a = b
-    b = temp
+# Define the characters to consider for generating combinations
+characters = string.ascii_letters + string.digits
 
-  while (b != 0):
-    temp = b
-    b = a % b
-    a = temp
-  
-  return a
+# Maximum length of the text to guess
+max_length = 6
 
-def get_e():
-  for i in range(2, phi):
-    if ((phi + 1) % i == 0): return i
-
-e = get_e()
-
-def get_d():
-  d = 0
-  for k in range(1, phi):
-    if ((k * phi + 1) % e == 0):
-      d = (k * phi + 1) / e;
-      return d;
-
-d = get_d()
-
-
-plaintext = 898
-ciphertext = pow(plaintext, e, n)
-
-decrypted = pow(int(ciphertext), int(d), int(n))
-
-print(plaintext)
-print("")
-print(ciphertext)
-print("")
-print(decrypted)
-print(plaintext == decrypted)
-print("----")
-
-def encryption(message, public_key):
-  return ''.join([chr(pow(ord(i), public_key['e'], public_key['n'])) for i in list(message)])
-
-def decryption(cipher, private_key):
-  return ''.join([chr(pow(ord(i), private_key['d'], private_key['n'])) for i in list(cipher)])
-
-# plaintext = ''.join(sorted('''qwertyuiop[]\\QWERTYUIOP{}|asdfghjkl;'ASDFGHJKL:"zxcvbnm,./ZXCVBNM<>?`1234567890-=~!@#$%^&*()_+'''))
-# ciphertext = encryption(plaintext, {'e': e, 'n': n})
-# decrypted = decryption(ciphertext, {'d':d, 'n':n})
-
-# print(plaintext)
-# print("")
-# print(ciphertext)
-# print("")
-# print(decrypted)
-# print(plaintext == decrypted)
+# Brute-force approach: try all possible combinations of characters up to max_length
+for length in range(1, max_length + 1):
+    for combination in itertools.product(characters, repeat=length):
+        guess = ''.join(combination)
+        hashed_guess = hashlib.sha256(guess.encode()).hexdigest()
+        
+        if hashed_guess == target_hash:
+            print("Original text:", guess)
+            break

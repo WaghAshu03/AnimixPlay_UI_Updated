@@ -1,67 +1,49 @@
-const p = 11;
-const q = 13;
+// const url = "https://wt-mini-project.netlify.app/api/get-users"; // Replace with your desired URL
+// const https = require("https");
 
-const n = p * q;
-const phi_n = (p - 1) * (q - 1);
+// // const url = 'https://example.com';
 
-function gcd(a, b) {
-  if (a < b) {
-    temp = a;
-    a = b;
-    b = temp;
-  }
+// const fs = require("fs");
 
-  while (b !== 0) {
-    const temp = b;
-    b = a % b;
-    a = temp;
-  }
-  return a;
+// function createJsonFile(dataObject, fileName) {
+//   const jsonData = JSON.stringify(dataObject, null, 2); // Convert object to formatted JSON string
+
+//   fs.writeFile(`${fileName}.json`, jsonData, "utf8", (err) => {
+//     if (err) {
+//       console.error("Error writing JSON file:", err);
+//     } else {
+//       console.log(`${fileName}.json file has been created successfully.`);
+//     }
+//   });
+// }
+
+// https
+//   .get(url, (response) => {
+//     let data = "";
+
+//     response.on("data", (chunk) => {
+//       data += chunk;
+//     });
+
+//     response.on("end", () => {
+//       console.log("Response data:", JSON.parse(data));
+//       createJsonFile(JSON.parse(data), "data");
+//       console.log("data.json saved");
+//     });
+//   })
+//   .on("error", (error) => {
+//     console.error("Error:", error);
+//   });
+
+const crypto = require("crypto");
+
+function calculateSHA256(input) {
+  const hash = crypto.createHash("sha256");
+  hash.update(input);
+  return hash.digest("hex");
 }
 
-const get_e = () => {
-  for (let i = 2; i < phi_n; i++) {
-    if (gcd(i, phi_n) === 1) return i;
-  }
+const input = "123456".repeat(1);
+const sha256Hash = calculateSHA256(input);
 
-  process.exit();
-};
-
-const e = 17; //get_e();
-
-const get_d = () => {
-  let d = 0;
-  for (let k = 1; k < phi_n; k++) {
-    if ((k * phi_n + 1) % e === 0) {
-      d = (k * phi_n + 1) / e;
-      return d;
-    }
-  }
-};
-
-const d = get_d();
-
-function modExp(base, exponent, modulus) {
-  if (modulus === 1) return 0;
-  let result = 1;
-  base = base % modulus;
-  while (exponent > 0) {
-    if (exponent % 2 === 1) {
-      result = (result * base) % modulus;
-    }
-    exponent = Math.floor(exponent / 2);
-    base = (base * base) % modulus;
-  }
-  return result;
-}
-
-// Encryption
-const plaintext = 123; // Numerical plaintext
-const ciphertext = modExp(plaintext, e, n);
-
-// Decryption
-const decrypted = modExp(ciphertext, d, n);
-
-console.log("Original:", plaintext);
-console.log("Ciphertext:", ciphertext);
-console.log("Decrypted:", decrypted);
+console.log("SHA-256 Hash:", sha256Hash);

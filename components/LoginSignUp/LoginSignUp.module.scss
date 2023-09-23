@@ -8,15 +8,16 @@
   left: 0;
   padding: 0;
   margin: 0;
-  background-image: url(../../public/banner.jpg);
+  // background-image: url("/wallpaper (10).jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(20px);
+  // transition: 0.5s;
+  // backdrop-filter: blur(20px);
 
   & > div {
-    backdrop-filter: blur(20px);
-    background-color: #0000008f;
+    // backdrop-filter: blur(20px);
     width: 100%;
     height: 100%;
     display: flex;
@@ -24,15 +25,17 @@
     justify-content: center;
 
     & > div {
-      //   background-color: #202125;
-      backdrop-filter: blur(20px);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      // background-color: #0000002f;
+      backdrop-filter: blur(15px);
       display: flex;
       flex-direction: column;
-      border: 2px solid #a9ff1c;
-      padding: 1rem;
-      border-radius: 10px;
-      min-width: 500px;
-      max-width: 520px;
+      border: 2px solid #ffffff2f;
+      padding: 1.5rem;
+      border-radius: 30px;
+      min-width: 460px;
+      max-width: 480px;
+      align-items: center;
 
       @media (max-width: 600px) {
         min-width: 95vw;
@@ -41,27 +44,35 @@
   }
 
   button {
-    background-color: #a9ff1c;
+    background-color: white;
+
     color: black;
     padding: 0.8rem 0.8rem;
     border: none;
     outline: none;
-    border-radius: 4px;
+    border-radius: 30px;
+    width: 70%;
+
     font-size: 1.2rem;
     margin-top: 1rem;
     cursor: pointer;
-    transition: 300ms;
+    transition: 600ms;
 
     &:active {
       // scale: 0.96;
       border: none;
       outline: none;
     }
+
+    // &:hover {
+    //   color: white;
+    //   background-color: #222;
+    // }
   }
 
   h1 {
     font-size: 2.5rem;
-    margin: 0.8rem 0rem 0.8rem 0rem;
+    margin: 0rem 0rem 2rem 0;
     text-align: center;
     // color: #a9ff1c;
     font-weight: 900;
@@ -71,6 +82,7 @@
   label {
     font-size: 1.15rem;
     margin: 0rem 0rem 0.4rem 0rem;
+    // color: transparent;
   }
 
   input[type="text"],
@@ -78,13 +90,27 @@
   input[type="password"] {
     outline: none;
     border: none;
-    padding: 0.8rem 0.8rem 0.8rem 0.5rem;
+    padding: 0.8rem 1rem;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 30px;
+    width: calc(90% - 2rem);
+    margin: 0.5rem 0;
 
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+
+    &::placeholder {
+      color: white;
+      transition: 0.4s;
+    }
     &:focus {
       outline: none;
-      border: none;
+      // border: none;
+
+      &::placeholder {
+        color: #c5c5c5;
+      }
     }
   }
 
@@ -100,7 +126,8 @@
   span {
     user-select: none;
     cursor: pointer;
-    color: #a9ff1c;
+    // color: #a9ff1c;
+    font-weight: bold;
     font-family: $primary-font-bold;
   }
 }
@@ -131,5 +158,5 @@
 }
 
 .SelectedAvatar {
-  border: 3px solid #a9ff1c !important;
+  border: 3px solid white !important;
 }
