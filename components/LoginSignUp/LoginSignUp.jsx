@@ -44,7 +44,9 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
     "/wallpaper (10).jpg",
   ];
   const [CurrentBgIndex, setCurrentBgIndex] = useState(
-    Math.floor(Math.random() * BackgroundImages.length)
+    (Math.floor(Math.random() * BackgroundImages.length) +
+      new Date().getTime()) %
+      BackgroundImages.length
   );
 
   useEffect(() => {
@@ -116,7 +118,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
       setSignUpUsernameMessage("");
     }
     if (SignUpPassword.trim() === "") {
-      setSignUpPasswordMessage("Please enter a valid username");
+      setSignUpPasswordMessage("Please enter a valid password");
       return 1;
     } else {
       setSignUpPasswordMessage("");
@@ -221,22 +223,26 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
               placeholder="Username"
               value={LoginUsername}
               onChange={(e) => setLoginUsername(e.target.value)}
+              style={{
+                marginBottom: LoginUsernameMessage.trim() !== "" && "0rem",
+              }}
             />
             {LoginUsernameMessage.trim() !== "" && (
               <div className={styles.Message}>{LoginUsernameMessage}</div>
             )}
-            <br />
             {/* <label>Password</label> */}
             <input
               type="password"
               placeholder="Password"
               value={LoginPassword}
               onChange={(e) => setLoginPassword(e.target.value)}
+              style={{
+                marginBottom: LoginPasswordMessage.trim() !== "" && "0rem",
+              }}
             />
             {LoginPasswordMessage.trim() !== "" && (
               <div className={styles.Message}>{LoginPasswordMessage}</div>
             )}
-            <br />
             <button onClick={LoginFunc}>{LoginButtonText}</button>
             <br />
             <div className={styles.BottomMessage}>
@@ -260,23 +266,28 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   type="text"
                   placeholder="First Name"
                   value={SignUpFirstName}
+                  style={{
+                    marginBottom:
+                      SignUpFirstNameMessage.trim() !== "" && "0rem",
+                  }}
                   onChange={(e) => setSignUpFirstName(e.target.value)}
                 />
                 {SignUpFirstNameMessage.trim() !== "" && (
                   <div className={styles.Message}>{SignUpFirstNameMessage}</div>
                 )}
-                <br />
                 {/* <label>Last Name</label> */}
                 <input
                   type="text"
                   placeholder="Last Name"
                   value={SignUpLastName}
                   onChange={(e) => setSignUpLastName(e.target.value)}
+                  style={{
+                    marginBottom: SignUpLastNameMessage.trim() !== "" && "0rem",
+                  }}
                 />
                 {SignUpLastNameMessage.trim() !== "" && (
                   <div className={styles.Message}>{SignUpLastNameMessage}</div>
                 )}
-                <br />
 
                 {/* <label>Email</label> */}
                 <input
@@ -284,6 +295,9 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   placeholder="Email"
                   value={SignUpEmail}
                   onChange={(e) => setSignUpEmail(e.target.value)}
+                  style={{
+                    marginBottom: SignUpEmailMessage.trim() !== "" && "0rem",
+                  }}
                 />
                 {SignUpEmailMessage.trim() !== "" && (
                   <div className={styles.Message}>{SignUpEmailMessage}</div>
@@ -322,11 +336,13 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   placeholder="Username"
                   value={SignUpUsername}
                   onChange={(e) => setSignUpUsername(e.target.value)}
+                  style={{
+                    marginBottom: SignUpUsernameMessage.trim() !== "" && "0rem",
+                  }}
                 />
                 {SignUpUsernameMessage.trim() !== "" && (
                   <div className={styles.Message}>{SignUpUsernameMessage}</div>
                 )}
-                <br />
                 {/* <label>Password</label> */}
                 <input
                   type="password"
@@ -335,11 +351,14 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   onChange={(e) => {
                     setSignUpPassword(e.target.value);
                   }}
+                  style={{
+                    marginBottom: SignUpPasswordMessage.trim() !== "" && "0rem",
+                  }}
                 />
                 {SignUpPasswordMessage.trim() !== "" && (
                   <div className={styles.Message}>{SignUpPasswordMessage}</div>
                 )}
-                <br />
+                {/* <br /> */}
                 <button onClick={ChkUser}>{SignUpButtonText}</button>
                 <br />
                 <div className={styles.BottomMessage}>
