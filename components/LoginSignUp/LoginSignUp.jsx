@@ -49,6 +49,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
     (Math.floor(RandomVal * BackgroundImages.length) + CurrentTime) %
       BackgroundImages.length
   );
+  const [PrevBgIndex, setPrevBgIndex] = useState(CurrentBgIndex);
   const LoginFormRef = useRef();
 
   useEffect(() => {
@@ -60,7 +61,17 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
       BackgroundImages,
     });
 
+    if (PrevBgIndex === CurrentBgIndex) {
+      if (CurrentBgIndex === BackgroundImages.length - 1) {
+        setCurrentBgIndex(0);
+      } else {
+        setCurrentBgIndex((prevVal) => prevVal + 1);
+      }
+    }
+
     LoginFormRef.current.style.backgroundImage = `url("${BackgroundImages[CurrentBgIndex]}")`;
+
+    setPrevBgIndex(CurrentBgIndex);
   }, [CurrentBgIndex]);
 
   useEffect(() => {
