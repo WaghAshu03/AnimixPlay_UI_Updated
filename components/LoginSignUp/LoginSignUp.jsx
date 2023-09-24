@@ -40,8 +40,8 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
   const BackgroundImages = [
     "/wallpaper (3).jpg",
     "/wallpaper (6).jpg",
-    "/wallpaper (8).jpg",
     "/wallpaper (10).jpg",
+    "/wallpaper (8).jpg",
   ];
   const CurrentTime = new Date().getTime();
   const RandomVal = Math.random();
@@ -61,13 +61,10 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
       BackgroundImages,
     });
 
-    if (PrevBgIndex === CurrentBgIndex) {
-      if (CurrentBgIndex === BackgroundImages.length - 1) {
-        setCurrentBgIndex(0);
-      } else {
-        setCurrentBgIndex((prevVal) => prevVal + 1);
-      }
-    }
+    if (PrevBgIndex === CurrentBgIndex)
+      setCurrentBgIndex((prevVal) => {
+        return prevVal === BackgroundImages.length - 1 ? 0 : prevVal + 1;
+      });
 
     LoginFormRef.current.style.backgroundImage = `url("${BackgroundImages[CurrentBgIndex]}")`;
 
@@ -275,11 +272,11 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
               <span
                 onClick={() => {
                   setIsLogin(false);
-                  setCurrentBgIndex(
-                    (Math.floor(RandomVal * BackgroundImages.length) +
-                      CurrentTime) %
-                      BackgroundImages.length
-                  );
+                  setCurrentBgIndex((prevVal) => {
+                    return prevVal === BackgroundImages.length - 1
+                      ? 0
+                      : prevVal + 1;
+                  });
                 }}
               >
                 Sign Up
@@ -397,11 +394,11 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   <span
                     onClick={() => {
                       setIsLogin(true);
-                      setCurrentBgIndex(
-                        (Math.floor(RandomVal * BackgroundImages.length) +
-                          CurrentTime) %
-                          BackgroundImages.length
-                      );
+                      setCurrentBgIndex((prevVal) => {
+                        return prevVal === BackgroundImages.length - 1
+                          ? 0
+                          : prevVal + 1;
+                      });
                     }}
                   >
                     Log In
