@@ -211,7 +211,12 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
     <div
       className={styles.LoginSignUp}
       style={{
-        backgroundImage: `url("${BackgroundImages[CurrentBgIndex]}")`,
+        backgroundImage: `url("${
+          BackgroundImages[
+            (Math.floor(RandomVal * BackgroundImages.length) + CurrentTime) %
+              BackgroundImages.length
+          ]
+        }")`,
       }}
     >
       <div>
