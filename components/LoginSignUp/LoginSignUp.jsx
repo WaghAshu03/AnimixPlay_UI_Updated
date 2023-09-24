@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import styles from "./LoginSignUp.module.scss";
 import chkUser from "@/pages/api/chk-user";
@@ -45,13 +45,22 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
   ];
   const CurrentTime = new Date().getTime();
   const RandomVal = Math.random();
-  const CIVar =
+  const [CurrentBgIndex, setCurrentBgIndex] = useState(
     (Math.floor(RandomVal * BackgroundImages.length) + CurrentTime) %
-    BackgroundImages.length;
-  const [CurrentBgIndex, setCurrentBgIndex] = useState(CIVar);
+      BackgroundImages.length
+  );
+  const LoginFormRef = useRef();
 
   useEffect(() => {
-    console.log({ CurrentBgIndex, CurrentTime, RandomVal });
+    console.log({
+      CurrentBgIndex,
+      CurrentTime,
+      RandomVal,
+      CurrentBg: `url("${BackgroundImages[CurrentBgIndex]}")`,
+      BackgroundImages,
+    });
+
+    LoginFormRef.current.style.backgroundImage = `url("${BackgroundImages[CurrentBgIndex]}")`;
   }, [CurrentBgIndex]);
 
   useEffect(() => {
@@ -208,17 +217,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
   };
 
   return (
-    <div
-      className={styles.LoginSignUp}
-      style={{
-        backgroundImage: `url("${
-          BackgroundImages[
-            (Math.floor(RandomVal * BackgroundImages.length) + CurrentTime) %
-              BackgroundImages.length
-          ]
-        }")`,
-      }}
-    >
+    <div className={styles.LoginSignUp} ref={LoginFormRef}>
       <div>
         {isLogin ? (
           <div>
@@ -257,6 +256,11 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
               <span
                 onClick={() => {
                   setIsLogin(false);
+                  setCurrentBgIndex(
+                    (Math.floor(RandomVal * BackgroundImages.length) +
+                      CurrentTime) %
+                      BackgroundImages.length
+                  );
                 }}
               >
                 Sign Up
@@ -373,6 +377,11 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
                   <span
                     onClick={() => {
                       setIsLogin(true);
+                      setCurrentBgIndex(
+                        (Math.floor(RandomVal * BackgroundImages.length) +
+                          CurrentTime) %
+                          BackgroundImages.length
+                      );
                     }}
                   >
                     Log In
