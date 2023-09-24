@@ -155,6 +155,9 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
       })
       .then(function (response) {
         setIsStage1Complete(true);
+        setCurrentBgIndex((prevVal) => {
+          return prevVal === BackgroundImages.length - 1 ? 0 : prevVal + 1;
+        });
         return true;
       })
       .catch(function (error) {
@@ -352,6 +355,7 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
 
                 {/* <br /> */}
                 <button onClick={RegisterForm}>{RegisterButtonText}</button>
+                {/* <button onClick={RegisterForm}>Go Back</button> */}
               </>
             ) : (
               <>
