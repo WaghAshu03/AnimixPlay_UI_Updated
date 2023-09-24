@@ -95,7 +95,7 @@ const show = () => {
         });
     }
 
-    // console.log({ showId, ep_no }, router);
+    console.log({ showId, epNo }, router);
   }, [router.query]);
 
   const AddToList = (showId) => {

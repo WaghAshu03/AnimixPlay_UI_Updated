@@ -218,6 +218,11 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
 
   return (
     <div className={styles.LoginSignUp} ref={LoginFormRef}>
+      {BackgroundImages.map((item, index) => {
+        return (
+          <link rel="preload" href={item} key={"bg" + index} as="image"></link>
+        );
+      })}
       <div>
         {isLogin ? (
           <div>
