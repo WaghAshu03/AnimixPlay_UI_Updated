@@ -43,11 +43,16 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
     "/wallpaper (8).jpg",
     "/wallpaper (10).jpg",
   ];
-  const [CurrentBgIndex, setCurrentBgIndex] = useState(
-    (Math.floor(Math.random() * BackgroundImages.length) +
-      new Date().getTime()) %
-      BackgroundImages.length
-  );
+  const CurrentTime = new Date().getTime();
+  const RandomVal = Math.random();
+  const CIVar =
+    (Math.floor(RandomVal * BackgroundImages.length) + CurrentTime) %
+    BackgroundImages.length;
+  const [CurrentBgIndex, setCurrentBgIndex] = useState(CIVar);
+
+  useEffect(() => {
+    console.log({ CurrentBgIndex, CurrentTime, RandomVal });
+  }, [CurrentBgIndex]);
 
   useEffect(() => {
     const valid = () => {
@@ -60,7 +65,6 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
       else {
         setSignUpEmailMessage("");
       }
-      console.log(validateEmail(SignUpEmail));
     };
     valid();
   }, [SignUpEmail]);
@@ -131,12 +135,10 @@ const LoginSignUp = ({ ClientData, setClientData, AvatarCollection }) => {
       })
       .then(function (response) {
         setIsStage1Complete(true);
-        console.log({ response });
         return true;
       })
       .catch(function (error) {
         if (error.response.data.error === "Username already in use") {
-          console.log("Username already in use");
           setSignUpUsernameMessage("Username already in use");
         } else {
           console.log({ error, username: SignUpUsername });

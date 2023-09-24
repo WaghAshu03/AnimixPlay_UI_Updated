@@ -16,7 +16,6 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     // Scroll to the top of the page
     window.scrollTo(0, 0);
-    console.log("Scroll");
   }, [router.route]);
 
   const [ClientData, setClientData] = useState({});
@@ -35,10 +34,6 @@ export default function App({ Component, pageProps }) {
 
     setClientData(JSON.parse(localStorage.ClientData));
   }, []);
-
-  useEffect(() => {
-    console.log(router.route);
-  }, [router]);
 
   useEffect(() => {
     // console.log("Updated Client Data", ClientData);

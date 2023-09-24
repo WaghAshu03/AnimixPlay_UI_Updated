@@ -168,14 +168,6 @@ export default function Home() {
     });
   }, []);
 
-  useEffect(() => {
-    console.log({
-      ClientData,
-      username: ClientData.username,
-      password: ClientData.password,
-    });
-  }, [ClientData]);
-
   const AddToList = (showId) => {
     // Getting Updated user data
     axios
@@ -185,7 +177,6 @@ export default function Home() {
       })
       .then(function (response) {
         setClientData(response.data[0]);
-        console.log(ClientData);
 
         // Getting Updated user data
         axios
@@ -232,10 +223,6 @@ export default function Home() {
       })
       .finally(function () {});
   };
-
-  useEffect(() => {
-    console.log(SuggestionsCollection);
-  }, [SuggestionsCollection]);
 
   return (
     <>
