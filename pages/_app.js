@@ -48,6 +48,9 @@ export default function App({ Component, pageProps }) {
         AvatarCollection,
       }}
     >
+      <link rel="preload" href="/logout.png" as="image"></link>
+      <link rel="preload" href="/profile-icon.png" as="image"></link>
+
       {Object.keys(ClientData).length !== 0 ? (
         <div className={"TheMainWindow"}>
           <Navbar />
